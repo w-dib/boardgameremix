@@ -31,7 +31,7 @@ export default function Home() {
         `https://api.boardgameatlas.com/api/search?categories=${formData.category}&min_players=${formData.playerCount}&lt_price=${formData.spend}&client_id=EsdgqvppMg`
       );
       if (data.games && data.games.length > 0) {
-        console.log(data.games[0]);
+        console.log(data.games[count]);
         setGames(data.games)
       } else {
         console.log(formData)
@@ -73,10 +73,10 @@ export default function Home() {
 
       {games.length > 0 && count < games.length ?
       <div className="flex flex-col items-center m-4">
-        <img src={games[0].image_url} alt={games[0].name} className="w-48 h-48" />
-        <div className="text-center font-mono text-xl">{games[0].name}</div>
-        <div className="text-center font-mono text-lg">{games[0].min_players} - {games[0].max_players} players</div>
-        <div className="text-center font-mono text-lg">${games[0].price}</div>
+        <img src={games[count].image_url} alt={games[count].name} className="w-48 h-48" />
+        <div className="text-center font-mono text-xl">{games[count].name}</div>
+        <div className="text-center font-mono text-lg">{games[count].min_players} - {games[count].max_players} players</div>
+        <div className="text-center font-mono text-lg">${games[count].price}</div>
         </div> : <div className="text-center font-mono text-xl">No more games found</div>}
 
 
