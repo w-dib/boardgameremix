@@ -2,7 +2,7 @@
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const CategoriesSelect = () => {
+const CategoriesSelect = ({}) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -28,9 +28,8 @@ const CategoriesSelect = () => {
       border border-solid border-gray-300
       rounded
       transition
-      ease-in-out
-      m-0
       text-center
+      ease-in-out
       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example'>
       {categories.map(category => (
         <option key={category.id} value={category.id}>
