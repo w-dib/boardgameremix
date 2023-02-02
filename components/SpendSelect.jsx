@@ -11,7 +11,6 @@ export default function SpendSelect({formData, setFormData}) {
   return (
     <div className='inline mb-3 xl:w-96'>
     <select
-    //  value={budget} onChange={event => setBudget(event.target.value)}
     value={formData}
     onChange={e => setFormData({...formData, spend: e.target.value})}
       className='form-select appearance-none
