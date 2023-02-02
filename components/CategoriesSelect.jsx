@@ -1,8 +1,7 @@
-"use client"
 import { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const CategoriesSelect = ({}) => {
+const CategoriesSelect = ({formData, setFormData}) => {
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -30,7 +29,10 @@ const CategoriesSelect = ({}) => {
       transition
       text-center
       ease-in-out
-      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example'>
+      focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example'
+      value={formData}
+      onChange={e => setFormData({...formData, category: e.target.value})}
+      >
       {categories.map(category => (
         <option key={category.id} value={category.id}>
           {category.name}

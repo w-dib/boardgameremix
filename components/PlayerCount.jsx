@@ -1,8 +1,8 @@
 "use client"
-import { useState} from 'react';
+// import { useState} from 'react';
 
-export default function PlayerCount() {
-  const [playerCount, setPlayerCount] = useState(1);
+export default function PlayerCount({formData, setFormData}) {
+  // const [playerCount, setPlayerCount] = useState(1);
 
   const options = [1, 2, 3, 4, 5, 6, 7].map(number => (
     <option key={number} value={number}>
@@ -13,7 +13,10 @@ export default function PlayerCount() {
   return (
     <div className='inline mb-3 xl:w-96'>
     <select
-     value={playerCount} onChange={event => setPlayerCount(event.target.value)}
+    //  value={playerCount} onChange={event => setPlayerCount(event.target.value)}
+    value={formData}
+    onChange={e => setFormData({...formData, playerCount: e.target.value})}
+
       className='form-select appearance-none
       px-7
       py-1.5
