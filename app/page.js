@@ -15,6 +15,7 @@ export default function Home() {
 
 
   const fetchOutput = async () => {
+    console.log(formData)
     try {
       const { data } = await axios.get(
         `https://api.boardgameatlas.com/api/search?categories=${formData.category}&min_players=${formData.playerCount}&lt_price=${formData.spend}&client_id=EsdgqvppMg`
@@ -29,9 +30,9 @@ export default function Home() {
     }
   };
   
-  useEffect(() => {
-    console.log(formData)
-    }, [formData])
+  // useEffect(() => {
+  //   console.log(formData)
+  //   }, [formData])
 
   return (
     <main >
