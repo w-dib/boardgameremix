@@ -12,8 +12,8 @@ export default function SpendSelect({formData, setFormData}) {
     <div className='inline mb-3 xl:w-96'>
     <select
     value={formData}
-    onChange={e => setFormData({...formData, spend: e.target.value})}
-      className='form-select appearance-none
+    onChange={e => setFormData(prevFormData => ({...prevFormData, spend: e.target.value}))}
+    className='form-select appearance-none
       px-7
       py-1.5
       text-base

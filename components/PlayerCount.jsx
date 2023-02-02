@@ -12,7 +12,7 @@ export default function PlayerCount({formData, setFormData}) {
     <div className='inline mb-3 xl:w-96'>
     <select
     value={formData}
-    onChange={e => setFormData({...formData, playerCount: e.target.value})}
+    onChange={e => setFormData(prevFormData => ({...prevFormData, playerCount: e.target.value}))}
 
       className='form-select appearance-none
       px-7

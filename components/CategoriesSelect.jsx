@@ -31,7 +31,7 @@ const CategoriesSelect = ({formData, setFormData}) => {
       ease-in-out
       focus:text-gray-700 focus:bg-white focus:border-blue-600 focus:outline-none" aria-label="Default select example'
       value={formData}
-      onChange={e => setFormData({...formData, category: e.target.value})}
+      onChange={e => setFormData(prevFormData => ({...prevFormData, category: e.target.value}))}
       >
       {categories.map(category => (
         <option key={category.id} value={category.id}>
