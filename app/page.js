@@ -11,7 +11,7 @@ export default function Home() {
   const [clicked, setClicked] = useState(false);
   const [count, setCount] = useState(0);
   const [formData, setFormData] = useState({
-    category: "2bdFPJUvFo",
+    category: "",
     playerCount: 1,
     spend: 25,
   })
