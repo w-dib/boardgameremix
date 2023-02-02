@@ -1,8 +1,6 @@
 "use client"
-import { useState} from 'react';
 
 export default function SpendSelect({formData, setFormData}) {
-  const [budget, setBudget] = useState(1);
 
   const options = [10, 25, 50, 75, 100, 200, 300 ].map(number => (
     <option key={number} value={number}>
